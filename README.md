@@ -1,6 +1,6 @@
 ### Языки ИП ###
 
-source code: 0.5 / 12
+source code: 0.5 / 12 <br>
 отчеты: 0 / 12
 
 ### Эл. тех ###
@@ -9,5 +9,5 @@ source code: 0.5 / 12
 
 ### БД ###
 
-source code: 0 / 4
+source code: 0 / 4 <br>
 отчеты: 0 / 4
