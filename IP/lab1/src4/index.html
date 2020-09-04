@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+    <title>registration</title>
+    <style>
+        td{
+            padding: 5px;
+        }
+        *{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Регистрация на киберспортивный турнир</h2>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    Имя:
+                </td>
+                <td>
+                    <input type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Никнейм:
+                </td>
+                <td>
+                    <input type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="email" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Пол:</td><td>Игры:</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="radio" value="male" name="gender" id="rMale" />
+                    <label for="rMale">мужской</label>
+                    <br />
+                    <input type="radio" value="female" name="gender" id="rFemale" />
+                    <label for="rFemale">женский</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="csgo" />
+                    <label for="csgo">CS:GO</label>
+                    <br />
+                    <input type="checkbox" id="dota" />
+                    <label for="dota">Dota 2</label>
+                    <br />
+                    <input type="checkbox" id="overwatch" />
+                    <label for="overwatch">Overwatch</label>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Repeat password:
+                </td>
+                <td>
+                    <input type="password" required/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <input type="submit" id="submitBtn" value="Регистрация"/>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
