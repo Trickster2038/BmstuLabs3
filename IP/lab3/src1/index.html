@@ -10,6 +10,10 @@
     
     <!-- <style></style> -->
     <style>
+        #btn-build{
+            position: relative;
+            top:30px;
+        }
         .red {
             color: red;
         }
@@ -56,6 +60,12 @@
         form table {
             border: none;
         }
+
+        #result{
+            align-self: right;
+            position: relative;
+            left: 30px;
+        }
     </style>
     <script>
         function tree() {
@@ -63,33 +73,26 @@
             var base = document.getElementById("htmltag");
             baseList = base.childNodes;
             var resfield = document.getElementById("result");
-            resfield.innerHTML = "html" + "<br/>";
+            resfield.innerHTML = "|html" + "<br/>";
 
             function layer(list, i = 1) {
                 var resfield = document.getElementById("result");
                 for (x of list) {
-                    if (x.nodeType == 1 && x.hasChildNodes()) {
+                    if (x.nodeType == 1 && x.hasChildNodes() && x.tagName != "BR") {
                         resfield.innerHTML += "|" + "&nbsp;".repeat(i) + x.tagName.toLowerCase() + "<br/>";
                         // "&lt" "&gt"
                         console.log(" ".repeat(i) + x.tagName.toLowerCase() + "\n");
                         layer(x.childNodes, i + 1);
-                        //document.write("|" + "&nbsp".repeat(i) + "<" + x.tagName + ">" + "\n");
-                    } else if (x.nodeType == 1) {
+                    } else if (x.nodeType == 1 && x.tagName != "BR") {
                         console.log(" ".repeat(i) + x.tagName.toLowerCase() + "\n");
                         resfield.innerHTML += "|" + "&nbsp;".repeat(i) + x.tagName.toLowerCase() + "<br/>";
-                        //document.write("|" + "&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
-                    } /*else if (x.nodeType == 3){
-                    document.write("|" + "&nbsp".repeat(i) + "[text info]" + "\n");
-                } */
+
+                    } 
                 }
             }
             layer(baseList);
 
-            //resfield.innerHTML += "</pre>";
-
-            //var resfield = document.getElementById("result");
-            //resfield.innerHTML = layer(baseList);
-
+         
         }
     </script>
 </head>
@@ -116,11 +119,6 @@
         <div class="row">
             <div class="col-4">
                 <img src="avatar.jpg" alt="avatar" width="150" height="150">
-            </div>
-            <div class="col-8">
-                <div class="col-8">
-                    <p>Любой текст</p>
-                </div>
             </div>
 
             <div class="row">
@@ -203,50 +201,14 @@
 
                         </table>
                     </form>
-                    <button class="btn btn-primary" onclick="tree();">Build tree</button>
+                    <button class="btn btn-primary" onclick="tree();" id="btn-build">Build tree</button>
                 </div>
                 
                 <div class="col-4" id="result">
-                    
-
-                    <!--<script>
-                        var base = document.getElementById("htmltag");
-                        document.write(base.tagName);
-                        for (x of base.childNodes) {
-                            if (x.nodeType == 1) {
-                                document.write(x.tagName + "\n");
-                            }
-                        }
-
-                        function f(g, x) {
-                            document.write(g);
-                            if (x < 3) {
-                                f(g, x + 1);
-
-                            }
-                        }
-
-                        f("test f()", 1);
-
-                    </script>
-
-                    <script>
-                        document.write("Testing js");
-
-                    </script>-->
                     <!--output-->
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <pre>
-                    Я помню <span class="red">чудное</span> мгновенье:
-                    Передо мной явилась ты,
-                    Как <span id="font">мимолетное виденье</span>,
-                    Как <span class="red">гений</span> чистой красоты.
-                    </pre>
-                </div>
-            </div>
+            
         </div>
     </main>
     <footer class="my-primary">
