@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru" id="htmltag">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICS6 Bootstrap</title>
+    <!-- <style></style> -->
+    <style>
+        .red {
+            color: red;
+        }
+
+        #font {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+        }
+
+        .my-primary {
+            background-color: #1A237E;
+            color: white;
+        }
+
+        main {
+            margin-top: 15px;
+        }
+
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        tr,
+        td,
+        table {
+            border: 1px double black;
+        }
+
+        form tr,
+        form td,
+        form table {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header></header> -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <main></main> -->
+    <main class="container" role="main">
+        <div class="row">
+            <div class="col-4">
+                <img src="avatar.jpg" alt="avatar" width="150" height="150">
+            </div>
+            <div class="col-8">
+                <div class="col-8">
+                    <p>Любой текст</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <h2 id="header2">Регистрация на киберспортивный турнир</h2>
+                    <form class="form">
+                        <table>
+                            <tr>
+                                <td>
+                                    Имя:
+                                </td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Никнейм:
+                                </td>
+                                <td>
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email:
+                                </td>
+                                <td>
+                                    <input type="email" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Пол:</td>
+                                <td>Игры:</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="radio" value="male" name="gender" id="rMale" />
+                                    <label for="rMale">мужской</label>
+                                    <br />
+                                    <input type="radio" value="female" name="gender" id="rFemale" />
+                                    <label for="rFemale">женский</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" id="csgo" />
+                                    <label for="csgo">CS:GO</label>
+                                    <br />
+                                    <input type="checkbox" id="dota" />
+                                    <label for="dota">Dota 2</label>
+                                    <br />
+                                    <input type="checkbox" id="overwatch" />
+                                    <label for="overwatch">Overwatch</label>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Password:
+                                </td>
+                                <td>
+                                    <input type="password" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Repeat password:
+                                </td>
+                                <td>
+                                    <input type="password" required />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" id="submitBtn" value="Регистрация" class="btn btn-primary" />
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                </div>
+                <div class="col-4" id="result">
+                    <button class="btn btn-primary" onclick="tree()">Build tree</button>
+                    <pre>
+                    <script>
+                        function tree() {
+                            var base = document.getElementById("htmltag");
+                            baseList = base.childNodes;
+                            function layer(list, i = 1) {
+                                for (x of list) {
+                                    if (x.nodeType == 1 && x.hasChildNodes()) {
+                                        document.write("|" + "&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
+                                        // "&lt" "&gt"
+                                        console.log("&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
+                                        layer(x.childNodes, i + 1);
+                                        //document.write("|" + "&nbsp".repeat(i) + "<" + x.tagName + ">" + "\n");
+                                    } else if (x.nodeType == 1) {
+                                        document.write("|" + "&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
+                                    } /*else if (x.nodeType == 3){
+                                    document.write("|" + "&nbsp".repeat(i) + "[text info]" + "\n");
+                                } */
+                                }
+                            }
+                            layer(baseList);
+                        }
+                    </script>
+                    </pre>
+
+                    <!--<script>
+                        var base = document.getElementById("htmltag");
+                        document.write(base.tagName);
+                        for (x of base.childNodes) {
+                            if (x.nodeType == 1) {
+                                document.write(x.tagName + "\n");
+                            }
+                        }
+
+                        function f(g, x) {
+                            document.write(g);
+                            if (x < 3) {
+                                f(g, x + 1);
+
+                            }
+                        }
+
+                        f("test f()", 1);
+
+                    </script>
+
+                    <script>
+                        document.write("Testing js");
+
+                    </script>-->
+                    <!--output-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <pre>
+                    Я помню <span class="red">чудное</span> мгновенье:
+                    Передо мной явилась ты,
+                    Как <span id="font">мимолетное виденье</span>,
+                    Как <span class="red">гений</span> чистой красоты.
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
