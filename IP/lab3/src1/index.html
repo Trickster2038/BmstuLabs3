@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ICS6 Bootstrap</title>
+    
     <!-- <style></style> -->
     <style>
         .red {
@@ -56,6 +57,41 @@
             border: none;
         }
     </style>
+    <script>
+        function tree() {
+            //var s = "";
+            var base = document.getElementById("htmltag");
+            baseList = base.childNodes;
+            var resfield = document.getElementById("result");
+            resfield.innerHTML = "html" + "<br/>";
+
+            function layer(list, i = 1) {
+                var resfield = document.getElementById("result");
+                for (x of list) {
+                    if (x.nodeType == 1 && x.hasChildNodes()) {
+                        resfield.innerHTML += "|" + "&nbsp;".repeat(i) + x.tagName.toLowerCase() + "<br/>";
+                        // "&lt" "&gt"
+                        console.log(" ".repeat(i) + x.tagName.toLowerCase() + "\n");
+                        layer(x.childNodes, i + 1);
+                        //document.write("|" + "&nbsp".repeat(i) + "<" + x.tagName + ">" + "\n");
+                    } else if (x.nodeType == 1) {
+                        console.log(" ".repeat(i) + x.tagName.toLowerCase() + "\n");
+                        resfield.innerHTML += "|" + "&nbsp;".repeat(i) + x.tagName.toLowerCase() + "<br/>";
+                        //document.write("|" + "&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
+                    } /*else if (x.nodeType == 3){
+                    document.write("|" + "&nbsp".repeat(i) + "[text info]" + "\n");
+                } */
+                }
+            }
+            layer(baseList);
+
+            //resfield.innerHTML += "</pre>";
+
+            //var resfield = document.getElementById("result");
+            //resfield.innerHTML = layer(baseList);
+
+        }
+    </script>
 </head>
 
 <body>
@@ -167,33 +203,11 @@
 
                         </table>
                     </form>
+                    <button class="btn btn-primary" onclick="tree();">Build tree</button>
                 </div>
+                
                 <div class="col-4" id="result">
-                    <button class="btn btn-primary" onclick="tree()">Build tree</button>
-                    <pre>
-                    <script>
-                        function tree() {
-                            var base = document.getElementById("htmltag");
-                            baseList = base.childNodes;
-                            function layer(list, i = 1) {
-                                for (x of list) {
-                                    if (x.nodeType == 1 && x.hasChildNodes()) {
-                                        document.write("|" + "&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
-                                        // "&lt" "&gt"
-                                        console.log("&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
-                                        layer(x.childNodes, i + 1);
-                                        //document.write("|" + "&nbsp".repeat(i) + "<" + x.tagName + ">" + "\n");
-                                    } else if (x.nodeType == 1) {
-                                        document.write("|" + "&nbsp".repeat(i) + x.tagName.toLowerCase() + "\n");
-                                    } /*else if (x.nodeType == 3){
-                                    document.write("|" + "&nbsp".repeat(i) + "[text info]" + "\n");
-                                } */
-                                }
-                            }
-                            layer(baseList);
-                        }
-                    </script>
-                    </pre>
+                    
 
                     <!--<script>
                         var base = document.getElementById("htmltag");
