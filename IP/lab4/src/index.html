@@ -11,7 +11,8 @@
     <style>
         div.col-4,
         div.col-3,
-        div.col {
+        div.col,
+        div.col-2{
             margin-left: 30px;
         }
 
@@ -21,6 +22,9 @@
 
         div {
             margin-top: 10px;
+        }
+        #basket td:last-child:hover, #catalogue td:nth-last-child(2):hover{
+            background-color: skyblue;
         }
     </style>
 
@@ -73,7 +77,7 @@
 
 <body>
     <div class="row">
-        <div class="col-3">
+        <div class="col-2">
             <form name="goods">
                 <p>Название</p><input type="text" id="name" required />
                 <br />
