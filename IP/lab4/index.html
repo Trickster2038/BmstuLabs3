@@ -9,13 +9,17 @@
     <title>Shop page</title>
 
     <style>
-        div.col-4{
+        div.col-4,
+        div.col-3,
+        div.col {
             margin-left: 30px;
         }
-        button{
+
+        button {
             margin-top: 10px;
         }
-        div{
+
+        div {
             margin-top: 10px;
         }
     </style>
@@ -36,34 +40,86 @@
             sum = 0;
             var costs = document.getElementsByClassName("costBasket");
             //console.log(costs[0].getAttribute("value"));
-            for(x of costs){
+            for (x of costs) {
                 sum += Number(x.getAttribute("value"));
             }
-           /* var table = document.getElementById("basket");
-            console.log(table.childNodes);
-            for(x of table.childNodes){
-                //sum += x.lastChild.innerHTML.toInt();
-                //console.log(x.tagName);
-            }*/
+            /* var table = document.getElementById("basket");
+             console.log(table.childNodes);
+             for(x of table.childNodes){
+                 //sum += x.lastChild.innerHTML.toInt();
+                 //console.log(x.tagName);
+             }*/
             var res = document.getElementById("sum");
             res.innerHTML = sum;
         }
+
+        function add(element) {
+            table = document.getElementById("basket");
+            if (emptyTable) {
+                emptyTable = false;
+                table.innerHTML += "<tr><th>Название</th><th>Цена, р</th></tr>"
+            }
+
+            
+            table.innerHTML += "<tr><td class=\"name\">" + element.parentNode.parentNode.children[0].innerHTML
+                 + "</td><td class=\"costBasket\" value=" 
+                 +element.parentNode.parentNode.children[1].innerHTML
+                  + ">" + element.parentNode.parentNode.children[1].innerHTML + "</td></tr>";
+        }
+
     </script>
 
 </head>
 
 <body>
     <div class="row">
-        <div class="col-4">
+        <div class="col-3">
             <form name="goods">
-                <p>Название</p><input type="text" id="name" required/>
+                <p>Название</p><input type="text" id="name" required />
                 <br />
-                <p>Цена</p><input type="number" id="cost" required/>
+                <p>Цена, р</p><input type="number" id="cost" required />
                 <br />
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
         </div>
         <div class="col-4">
+            <table class="table">
+                <tr>
+                    <th>Название</th>
+                    <th>Цена, р</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Samsung A51</td>
+                    <td>18999</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="add(this);">Добавить</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Usb type-c</td>
+                    <td>350</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="add(this);">Добавить</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>защитное стекло для Samsung A51</td>
+                    <td>750</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="add(this);">Добавить</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>гарнитура jbl</td>
+                    <td>1500</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="add(this);">Добавить</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-3">
             <!--<button onclick="addCustom();">TEST</button>-->
             <p>Заказ:</p>
             <table class="table" id="basket">
@@ -71,7 +127,7 @@
             <div>
                 <button class="btn btn-primary" onclick="calculate();">Рассчитать</button>
                 <br>
-                <div><span>Сумма:&nbsp;<span id="sum"></span></span></div>
+                <div><span>Сумма, р:&nbsp;<span id="sum"></span></span></div>
             </div>
         </div>
     </div>
