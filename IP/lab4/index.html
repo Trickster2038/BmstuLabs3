@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru" id="htmltag">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop page</title>
+
+    <style>
+        div.col-4{
+            margin-left: 30px;
+        }
+        button{
+            margin-top: 10px;
+        }
+        div{
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        emptyTable = true;
+        function addCustom() {
+            var table = document.getElementById("basket");
+            if (emptyTable) {
+                emptyTable = false;
+                table.innerHTML += "<tr><th>Название</th><th>Цена</th></tr>"
+            }
+
+            table.innerHTML += "<tr><th>test</th><th>test</th></tr>"
+        }
+
+        function calculate() {
+            sum = 0;
+            var costs = document.getElementsByClassName("costBasket");
+            //console.log(costs[0].getAttribute("value"));
+            for(x of costs){
+                sum += Number(x.getAttribute("value"));
+            }
+           /* var table = document.getElementById("basket");
+            console.log(table.childNodes);
+            for(x of table.childNodes){
+                //sum += x.lastChild.innerHTML.toInt();
+                //console.log(x.tagName);
+            }*/
+            var res = document.getElementById("sum");
+            res.innerHTML = sum;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-4">
+            <form name="goods">
+                <p>Название</p><input type="text" id="name" required/>
+                <br />
+                <p>Цена</p><input type="number" id="cost" required/>
+                <br />
+                <button type="submit" class="btn btn-primary">Добавить</button>
+            </form>
+        </div>
+        <div class="col-4">
+            <!--<button onclick="addCustom();">TEST</button>-->
+            <p>Заказ:</p>
+            <table class="table" id="basket">
+            </table>
+            <div>
+                <button class="btn btn-primary" onclick="calculate();">Рассчитать</button>
+                <br>
+                <div><span>Сумма:&nbsp;<span id="sum"></span></span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        emptyTable = true;
+        document.forms.goods.onsubmit = function onSubmit(e) {
+            e.preventDefault();
+            table = document.getElementById("basket");
+            goodName = document.getElementById("name");
+            cost = document.getElementById("cost");
+            if (emptyTable) {
+                emptyTable = false;
+                table.innerHTML += "<tr><th>Название</th><th>Цена</th></tr>"
+            }
+
+            table.innerHTML += "<tr><td class=\"name\">" + goodName.value + "</td><td class=\"costBasket\" value=" + cost.value + ">" + cost.value + "</td></tr>"
+        }
+    </script>
+
+</body>
+
+</html>
