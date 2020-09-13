@@ -60,11 +60,11 @@
                 table.innerHTML += "<tr><th>Название</th><th>Цена, р</th></tr>"
             }
 
-            
+
             table.innerHTML += "<tr><td class=\"name\">" + element.parentNode.parentNode.children[0].innerHTML
-                 + "</td><td class=\"costBasket\" value=" 
-                 +element.parentNode.parentNode.children[1].innerHTML
-                  + ">" + element.parentNode.parentNode.children[1].innerHTML + "</td></tr>";
+                + "</td><td class=\"costBasket\" value="
+                + element.parentNode.parentNode.children[1].innerHTML
+                + ">" + element.parentNode.parentNode.children[1].innerHTML + "</td></tr>";
         }
 
     </script>
@@ -83,35 +83,35 @@
             </form>
         </div>
         <div class="col-4">
-            <table class="table">
+            <table class="table" id="catalogue">
                 <tr>
                     <th>Название</th>
                     <th>Цена, р</th>
                     <th></th>
                 </tr>
                 <tr>
-                    <td>Samsung A51</td>
+                    <td class="nameUniq">Samsung A51</td>
                     <td>18999</td>
                     <td>
                         <button class="btn btn-primary" onclick="add(this);">Добавить</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>Usb type-c</td>
+                    <td class="nameUniq">Usb type-c</td>
                     <td>350</td>
                     <td>
                         <button class="btn btn-primary" onclick="add(this);">Добавить</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>защитное стекло для Samsung A51</td>
+                    <td class="nameUniq">защитное стекло для Samsung A51</td>
                     <td>750</td>
                     <td>
                         <button class="btn btn-primary" onclick="add(this);">Добавить</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>гарнитура jbl</td>
+                    <td class="nameUniq">гарнитура jbl</td>
                     <td>1500</td>
                     <td>
                         <button class="btn btn-primary" onclick="add(this);">Добавить</button>
@@ -136,15 +136,31 @@
         emptyTable = true;
         document.forms.goods.onsubmit = function onSubmit(e) {
             e.preventDefault();
-            table = document.getElementById("basket");
+            table = document.getElementById("catalogue");
             goodName = document.getElementById("name");
             cost = document.getElementById("cost");
-            if (emptyTable) {
+            /*if (emptyTable) {
                 emptyTable = false;
                 table.innerHTML += "<tr><th>Название</th><th>Цена</th></tr>"
-            }
+            }*/
 
-            table.innerHTML += "<tr><td class=\"name\">" + goodName.value + "</td><td class=\"costBasket\" value=" + cost.value + ">" + cost.value + "</td></tr>"
+            names = document.getElementsByClassName("nameUniq");
+            newKind = true;
+            //console.log("names " + names);
+            //console.log("new " + goodName.value);
+            for (x of names) {
+                //console.log("name " + x.innerHTML);
+                if (x.innerHTML == goodName.value) {
+                    newKind = false;
+                }
+            }
+            //console.log(table.children);
+
+            if (newKind) {
+                table.innerHTML += "<tr><td class=\"nameUniq\">" + goodName.value + "</td><td value="
+                    + cost.value + ">" + cost.value + "</td>"
+                    + "<td><button class=\"btn btn-primary\" onclick=\"add(this);\">Добавить</button> </td></tr>";
+            }
         }
     </script>
 
