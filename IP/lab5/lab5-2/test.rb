@@ -1,47 +1,46 @@
+# frozen_string_literal: true
+
 require './parser.rb'
 require 'minitest/autorun'
 
+# Testing Parser module
 class TestFunc < Minitest::Test
+  def setup
+    # o = [('a'..'z'), ('A'..'Z'), (' '..' ')].map(&:to_a).flatten
+    @test_string = ''
+    arg = ''
+    # oldS = true
+    alphabet = [('a'..'z')].map(&:to_a).flatten
+    (0..9).each do |_i|
+      alphabet.push(' ')
+    end
+    (0..4).each do |_i|
+      alphabet.push('  ')
+    end
 
+    # p a
 
+    while arg.scan(/([\s]{2,})|(\s\w\s)/m).empty?
+      arg = ''
+      # p "loop"
+      (0..14).each do |_i|
+        arg += alphabet[rand(alphabet.length)]
+      end
+      # p s
+    end
 
-	def setup
-		#o = [('a'..'z'), ('A'..'Z'), (' '..' ')].map(&:to_a).flatten
-		$tString = ''
-		s = ''
-		oldS = true
-		a = [('a'..'z')].map(&:to_a).flatten
-		for i in 0..9
-			a.push(' ')
-		end
-		for i in 0..4
-			a.push('  ')
-		end
+    @test_string = arg
+    print 'Testing string: '
+    print @test_string + "\n"
+  end
 
-		#p a
+  def test_random
+    # p @test_string
+    print 'Result string: '
+    result = Parser.parse(@test_string)
+    print result
+    assert result.scan(/([\s]{2,})|(\s\w\s)/m).size.zero?
+  end
 
-		until s.scan(/([\s]{2,})|(\s\w\s)/m).size != 0 
-			s = ''
-			#p "loop"
-			for i in 0..14
-				s += a[rand(a.length)]
-			end
-			#p s
-		end
-
-		$tString = s
-		print "Testing string: "
-		print $tString + "\n";
-	end
-
-	def test_1
-			#p $tString
-			print "Result string: "
-			print Parser.parse($tString)
-			assert Parser.parse($tString).scan(/([\s]{2,})|(\s\w\s)/m).size == 0
-		end
-
-		def teardown
-		end
-
-	end
+  def teardown; end
+end
