@@ -3,7 +3,7 @@
 require_relative 'count'
 require_relative 'count'
 
-print "Hello, src.rb \n"
+print "Input x, y, z to calculate function \n"
 x1 = gets
 y1 = gets
 z1 = gets
