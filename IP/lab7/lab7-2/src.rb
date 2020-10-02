@@ -1,22 +1,15 @@
-class FlatBoard
-    def initialize(in_width, in_height)
-        @width, @height = in_width, in_height
-    end
+# frozen_string_literal: true
+require_relative 'boards'
 
-    def square
-        @width * @height
-    end
-end
-
-class VolumetricBoard < FlatBoard
-    def initialize(in_width, in_height, in_depth)
-        super(in_width, in_height)
-        @depth = in_depth
-    end
-    def volume
-        @depth * square
-    end
-end
-
-a = VolumetricBoard.new(3,4,2)
-p a.volume
+puts "\n\nInput x, y for flat board\n"
+width = gets.to_i
+height = gets.to_i
+boardS = FlatBoard.new(width, height)
+print "Square of flat board: #{boardS.square}"
+puts "\n\nInput x, y, z for flat board\n"
+width = gets.to_i
+height = gets.to_i
+depth = gets.to_i
+boardV = VolumetricBoard.new(width, height, depth)
+print "Square of volumetric board: #{boardV.square}\n"
+print "Volume of volumetric board: #{boardV.volume}"

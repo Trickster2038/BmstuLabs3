@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative 'count'
-require_relative 'count'
 
 puts("\nApproximation of circle square \n\n")
 (1..10).each{|variable| 

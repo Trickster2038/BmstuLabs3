@@ -30,16 +30,37 @@ class TestFunc < Minitest::Test
     end
 
     @test_string = arg
-    print 'Testing string: '
-    print @test_string + "\n"
+    
   end
 
   def test_random
+    print 'Testing string: '
+    print @test_string + "\n"
     # p @test_string
     print 'Result string: '
     result = Parser.parse(@test_string)
     print result
     assert result.scan(/([\s]{2,})|(\s\w\s)/m).size.zero?
+  end
+
+  def test_bad_string
+    print 'Testing string: '
+    print "a string   full o f mis  takes" + "\n"
+    # p @test_string
+    print 'Result string: '
+    result = Parser.parse("a string   full o f mis  takes")
+    print result
+    assert result.scan(/([\s]{2,})|(\s\w\s)/m).size.zero?
+  end
+
+  def test_good_string
+    print 'Testing string: '
+    print "nice string with nothing to cut" + "\n"
+    # p @test_string
+    print 'Result string: '
+    result = Parser.parse("a string   full o f mis  takes")
+    print result
+    assert result == "nice string with nothing to cut"
   end
 
   def teardown; end
