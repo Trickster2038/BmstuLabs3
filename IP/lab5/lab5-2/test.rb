@@ -18,15 +18,12 @@ class TestFunc < Minitest::Test
       alphabet.push('  ')
     end
 
-    # p a
 
     while arg.scan(/([\s]{2,})|(\s\w\s)/m).empty?
       arg = ''
-      # p "loop"
       (0..14).each do |_i|
         arg += alphabet[rand(alphabet.length)]
       end
-      # p s
     end
 
     @test_string = arg
@@ -36,7 +33,6 @@ class TestFunc < Minitest::Test
   def test_random
     print 'Testing string: '
     print @test_string + "\n"
-    # p @test_string
     print 'Result string: '
     result = Parser.parse(@test_string)
     print result
@@ -46,7 +42,6 @@ class TestFunc < Minitest::Test
   def test_bad_string
     print 'Testing string: '
     print "a string   full o f mis  takes" + "\n"
-    # p @test_string
     print 'Result string: '
     result = Parser.parse("a string   full o f mis  takes")
     print result
@@ -56,7 +51,6 @@ class TestFunc < Minitest::Test
   def test_good_string
     print 'Testing string: '
     print "nice string with nothing to cut" + "\n"
-    # p @test_string
     print 'Result string: '
     result = Parser.parse("a string   full o f mis  takes")
     print result

@@ -1,11 +1,5 @@
-def maxim(func2, start, stop, step_size, &func1)
-    max_distance = 0
-    (start..stop).step(step_size) {|x| max_distance = (func1.call(x) - func2.call(x)).abs \
-     if (func1.call(x) - func2.call(x)).abs > max_distance}
-    max_distance
-end
-pr = lambda{|x| x*2}
-pr2 = lambda{|x| x*4}
-fr = proc{|x| x*3}
-p maxim(fr, 0.5, 1, 0.01){|x| x*2}
-p maxim(fr, 0.5, 1, 0.01, &pr2)
+require_relative 'maxim'
+
+func1 = lambda{|x| Math.sin(x)/x}
+printf("\n\nMax distance between sin(x)/x and tg(x+1)/(x+1) is:\n %<res>3.2f\n\n",\
+ res: Distance.maxim(func1, 0.5, 1, 0.01){|x| Math.tan(x+1)/(x+1)})

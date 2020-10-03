@@ -13,6 +13,3 @@ module Counter
     return n - 2
   end
 end
-
-#p Math::PI
-#p Counter.count(6, 0.0001)
