@@ -30,7 +30,7 @@ class TestFunc < Minitest::Test
 
   def test_volume
     board_v = VolumetricBoard.new(2, 7, 4)
-    assert(board_v.volume == 2 * 7 * 4)
+    assert_equal board_v.volume, 56 # 2*7*4
   end
 
   def teardown; end

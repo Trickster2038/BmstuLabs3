@@ -11,10 +11,10 @@ class TestFunc < Minitest::Test
     arg = ''
     # oldS = true
     alphabet = [('a'..'z')].map(&:to_a).flatten
-    (0..9).each do |_i|
+    9.times do
       alphabet.push(' ')
     end
-    (0..4).each do |_i|
+    5.times do
       alphabet.push('  ')
     end
 
@@ -52,9 +52,9 @@ class TestFunc < Minitest::Test
     print 'Testing string: '
     print "nice string with nothing to cut" + "\n"
     print 'Result string: '
-    result = Parser.parse("a string   full o f mis  takes")
+    result = Parser.parse("nice string with nothing to cut")
     print result
-    assert result == "nice string with nothing to cut"
+    assert_equal result, "nice string with nothing to cut"
   end
 
   def teardown; end

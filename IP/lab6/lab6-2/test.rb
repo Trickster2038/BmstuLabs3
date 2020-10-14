@@ -12,11 +12,11 @@ class TestFunc < Minitest::Test
   end
 
   def test_zero
-    assert Counter.count(0, 0.01) == 0, 'Zero radius not => 0'
+    assert_equal Counter.count(0, 0.01), 0, 'Zero radius not => 0'
   end
 
   def test_brute
-    assert Counter.count(2, 12), 'Not one itertion for big eps'
+    assert_equal Counter.count(2, 12), 1, 'Not one itertion for big eps'
   end
 
   def test_accurate
