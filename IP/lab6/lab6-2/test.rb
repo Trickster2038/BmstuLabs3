@@ -23,5 +23,9 @@ class TestFunc < Minitest::Test
     assert Counter.count(3, 0.00001) > 1000, 'Not over 1k itertion for low eps'
   end
 
+  def test_algorythm_equality
+    assert_equal Counter.count(1, 0.1), 13, 'Not same accuracy as standart cycle'
+  end
+
   def teardown; end
 end
