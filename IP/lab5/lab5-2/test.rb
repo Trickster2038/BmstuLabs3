@@ -11,19 +11,14 @@ class TestFunc < Minitest::Test
     arg = ''
     # oldS = true
     alphabet = ('a'..'z').to_a
-    9.times do
-      alphabet.push(' ')
-    end
-    5.times do
-      alphabet.push('  ')
-    end
+    9.times{alphabet.push(' ')}
+    5.times{alphabet.push('  ')}
+
 
 
     while arg.scan(/([\s]{2,})|(\s\w\s)/m).empty?
       arg = ''
-      (0..14).each do |_i|
-        arg += alphabet[rand(alphabet.length)]
-      end
+      14.times{arg += alphabet[rand(alphabet.length)]}
     end
 
     @test_string = arg
