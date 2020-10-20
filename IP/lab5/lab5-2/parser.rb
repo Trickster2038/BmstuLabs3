@@ -4,6 +4,6 @@
 # Class that modifies string
 module Parser
   def self.parse(input_s)
-    input_s.split.map{|elem| elem.to_s.length == 1 ? nil : elem}.compact.join(' ')
+    input_s.split.reject { |elem| elem.to_s.length == 1 }.join(' ')
   end
 end

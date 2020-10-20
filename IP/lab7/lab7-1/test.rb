@@ -8,10 +8,10 @@ class TestFunc < Minitest::Test
   def setup; end
 
   def test_file_generated
-    File.open('generated.txt', 'w'){ |file| file.write "app application zero \n standart all word" }
+    File.open('generated.txt', 'w') { |file| file.write "app application zero \n standart all word" }
     result = Searcher.search('generated.txt')
     File.delete('generated.txt')
-    assert_equal result, "application"
+    assert_equal result, 'application'
   end
 
   def test_file_abrocadabra

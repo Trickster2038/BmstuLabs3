@@ -6,10 +6,10 @@ module Counter
 
   def self.count_enum(radius)
     Enumerator.new do |result|
-      n = 2
+      n_sides = 2
       loop do
-        result << 0.5 * (radius ** 2) * n * Math.sin(2 * Math::PI / n)
-        n += 1
+        result << 0.5 * (radius ** 2) * n_sides * Math.sin(2 * Math::PI / n_sides)
+        n_sides += 1
       end
     end
   end

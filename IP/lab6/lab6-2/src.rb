@@ -2,6 +2,8 @@
 
 require_relative 'count'
 
+# include модуля
+
 my_enumerator = Enumerator.new do |table|
 	eps = 0.1
 	loop do
