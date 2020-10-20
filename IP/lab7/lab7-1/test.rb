@@ -15,7 +15,7 @@ class TestFunc < Minitest::Test
   end
 
   def test_file_abrocadabra
-    assert_equal Searcher.search('f.txt'), 'abrocadabra'
+    assert_equal Searcher.search('f.txt'), 'abrocadaboa'
   end
 
   def test_file_ambassador
