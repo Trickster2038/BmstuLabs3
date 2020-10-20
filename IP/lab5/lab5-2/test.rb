@@ -10,7 +10,7 @@ class TestFunc < Minitest::Test
     @test_string = ''
     arg = ''
     # oldS = true
-    alphabet = [('a'..'z')].map(&:to_a).flatten
+    alphabet = ('a'..'z').to_a
     9.times do
       alphabet.push(' ')
     end
