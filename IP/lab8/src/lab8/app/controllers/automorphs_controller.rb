@@ -44,7 +44,7 @@ class AutomorphsController < ApplicationController
   def view
      args = parse_input(params[:search_range])
      @result = parse_sequence(args)
-     @result = "no such sequences []" if @result.empty?
+     @result = "no such sequences to output[]" if @result.empty?
   #     elem.to_s[-1] == (elem**2).to_s[-1]
 	end
 
