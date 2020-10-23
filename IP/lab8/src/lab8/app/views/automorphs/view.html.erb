@@ -2,12 +2,11 @@
 <p>Find me in app/views/automorphs/view.html.erb</p>
 <table>
 	<p id="result">
-		<% if @result == "no such sequences to output[]" %>
+		<% if @result == "no such sequences to output[]" || @result == "incorrect input" %>
 		<%= @result%>
 		<%else%>
 		<table>
-			<tr><td>n</td><td>size</td></tr>
-
+			<tr><td>sequence</td><td>size</td></tr>
 
 			<% @result.each do |elem| %>
 			<tr>
@@ -16,11 +15,6 @@
 			</tr>
 			<% end %>
 
-
-			<tr>
-				<td>debug:</td>
-				<td><%= @result%></td>
-			</tr>
 			<tr>
 				<td>longest sequence:</td>
 				<td><%= @result.max{|elem, next_elem| elem.size <=> next_elem.size}%></td>
@@ -32,4 +26,4 @@
 		</table>
 		<% end %>
 	</p> 
-	<%= link_to "Search in other range", :automorphs_input %>
+	<%= link_to "Search in other sequence(array)", :automorphs_input %>
