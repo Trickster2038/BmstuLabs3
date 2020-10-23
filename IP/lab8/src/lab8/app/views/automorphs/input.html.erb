@@ -1,6 +1,6 @@
 <h1>Automorphs#input</h1>
 <p>Find me in app/views/automorphs/input.html.erb</p>
-<p>Search of Automorphs(e.g. 5<sup>2</sup> = 25) in range[1..x]</p>
+<p>Search of full squares sequence(e.g. 7, 3, 4, 9, 14, 16 -> [3, 4, 9], [16]), use space as separator(e.g.)</p>
 <%= form_tag("/automorphs/view", :method => "get") do %>
     <%= label_tag("Size of search range:") %>
     <%= text_field_tag(:search_range) %>
