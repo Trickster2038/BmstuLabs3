@@ -24,11 +24,17 @@ class AutomorphsController < ApplicationController
 
 	def view
 		input_s = params[:search_range]
-		if input_s.match?(/[^0-9 ]/)
-			@result = "incorrect input"
+
+		# checking only creation of views by default raises error of nil input
+		if input_s.nil? 
+			@result = "nil input (might be init test)"
 		else
-			@result = parse_sequence(parse_input(input_s))
-			@result = "no such sequences to output[]" if @result.flatten.empty?
+			if input_s.match?(/[^0-9 ]/)
+				@result = "incorrect input"
+			else
+				@result = parse_sequence(parse_input(input_s))
+				@result = "no such sequences to output[]" if @result.flatten.empty?
+			end
 		end
 
 	end

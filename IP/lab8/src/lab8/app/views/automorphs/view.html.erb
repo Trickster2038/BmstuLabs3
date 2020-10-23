@@ -2,7 +2,7 @@
 <p>Find me in app/views/automorphs/view.html.erb</p>
 <table>
 	<p id="result">
-		<% if @result == "no such sequences to output[]" || @result == "incorrect input" %>
+		<% if @result == "no such sequences to output[]" || @result == "incorrect input" || @result == "nil input (might be init test)"%>
 		<%= @result%>
 		<%else%>
 		<table>
