@@ -3,11 +3,11 @@
 
 # counts max distance between functions
 module Distance
-  def self.maxim(func2, start, stop, step_size, &func1)
+  def self.maxim(function_lambda, start, stop, step_size, &function_block)
     max_distance = 0
-    (start..stop).step(step_size) do |x|
-      max_distance = (func1.call(x) - func2.call(x)).abs \
-           if (func1.call(x) - func2.call(x)).abs > max_distance
+    (start..stop).step(step_size) do |arg|
+      max_distance = (function_lambda.call(arg) - function_block.call(arg)).abs \
+           if (function_lambda.call(arg) - function_block.call(arg)).abs > max_distance
     end
     max_distance
   end

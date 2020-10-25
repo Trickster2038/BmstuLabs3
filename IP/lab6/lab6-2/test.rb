@@ -8,7 +8,7 @@ class TestFunc < Minitest::Test
   def setup; end
 
   def test_dependence
-    assert Counter.count(1,0.01) < Counter.count(1,0.001), 'Iterations != f(eps)'
+    assert Counter.count(1, 0.01) < Counter.count(1, 0.001), 'Iterations != f(eps)'
   end
 
   def test_zero
