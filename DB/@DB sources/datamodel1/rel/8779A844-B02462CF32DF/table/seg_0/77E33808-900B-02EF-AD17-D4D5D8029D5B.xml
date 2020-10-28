@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="77E33808-900B-02EF-AD17-D4D5D8029D5B" name="Flight">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:36:42 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Flight_ID" id="44E00992-C983-C6CB-4702-D343C952AE84">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:38:08 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transporter_ID" id="B276D217-ED85-8B6D-5261-55657A97C5A9">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:38:08 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0691691E-45E6-5CC1-77CD-CC34AB3E4C61" referredColumn="DDD2990E-B43B-8254-D7F2-D328557FDE16"/>
+</associations>
+</Column>
+<Column name="DepartureTime" id="D96AA00E-9E32-3AB5-F9A0-0AEE3BFB08DF">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:38:08 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ArriveTime" id="975734B6-4550-C12B-4AF7-7CE7A4893778">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:38:08 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AirportDep" id="0B65A7FA-8D96-A425-EF8A-D8D31EEDF00E">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:42:25 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9FA8E640-38F6-7819-FA25-44ABC9D98DBB" referredColumn="2F4E6014-ABE6-9252-98F2-878C6C43E1F3"/>
+</associations>
+</Column>
+<Column name="AirportArr" id="B271A9C5-4AC2-BDC8-E5A4-2687AD4C23F6">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:42:25 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="675EDD02-6D93-5CC9-6577-DAFBF3126511" referredColumn="2F4E6014-ABE6-9252-98F2-878C6C43E1F3"/>
+</associations>
+</Column>
+<Column name="International_code" id="D21E1D3D-4BB6-98CE-A6B1-759A2C84EDD9">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:42:25 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2369AB24-EE97-C4A0-8FA2-EB1FCDB48584" name="Flight_PK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:42:25 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44E00992-C983-C6CB-4702-D343C952AE84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A63B6A43-11D4-6702-88BB-D4C7164A8BAF" name="Flight_Airport_FK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 14:15:00 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0B65A7FA-8D96-A425-EF8A-D8D31EEDF00E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8612241F-94A9-F205-3F4D-90704101B817" name="Flight_Airport_FKv2">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 14:15:12 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B271A9C5-4AC2-BDC8-E5A4-2687AD4C23F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB046AEB-C34A-5ACD-68EF-70595EF00E7D" name="Flight_Transporter_FK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 14:21:34 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B276D217-ED85-8B6D-5261-55657A97C5A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="684DB0F2-2E4A-DB5D-35FF-280938C857B7" name="Client">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 11:50:09 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Client_ID" id="ED42C3DB-F815-57ED-C8C8-C0CF6663E050">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:27 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Surname" id="8E465390-8DEA-BAD4-8BB5-D9573B9C00E7">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="6EA4AE5E-A3A9-1157-2DA3-F7154308B0D7">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Thirdname" id="E0637BC4-8E47-79FF-FEB2-3EF5C2F6AA38">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Doctype" id="A0AFE94B-E92C-C052-710D-B2E814894BF0">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Docnum" id="BD67FDE6-44D9-B5D0-1D4C-A10BCDF64E8D">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="3DEE6B5D-EC51-9EEC-7D99-4FE23189440A">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="post" id="F6F7F2C7-FF80-3E5A-4799-48C619D08ABE">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AAE34456-2435-D9C4-8CF7-44E9F8D0E36A" name="Client_PK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:01:28 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED42C3DB-F815-57ED-C8C8-C0CF6663E050"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

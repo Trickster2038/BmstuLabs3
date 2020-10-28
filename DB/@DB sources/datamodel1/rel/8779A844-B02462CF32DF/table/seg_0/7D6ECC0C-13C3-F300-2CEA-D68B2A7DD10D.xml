@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7D6ECC0C-13C3-F300-2CEA-D68B2A7DD10D" name="Order">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:15:29 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Order_ID" id="46F8C5F4-124D-7980-B41E-83C754AED406">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:15:57 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Client" id="ED43A108-5C15-63F5-FEE5-317EFE54AAF2">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:17:00 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E8684C8-8681-CDA3-3EC7-DEBE3B4A1021" referredColumn="ED42C3DB-F815-57ED-C8C8-C0CF6663E050"/>
+</associations>
+</Column>
+<Column name="Order_date" id="595F1A25-80D5-A3B8-13BA-20E1B80B9F54">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:36 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DirectFlightDay" id="A854B89F-3D41-52BB-4908-876BE014A33D">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:36 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BackFlightDate" id="D382E58A-CED4-97A8-47A2-FE91ECE06944">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:36 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ArriveCity" id="E9411656-3771-C95F-4289-886EB531122D">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:36 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C35C226B-3099-1413-BAEA-27B990E27333" referredColumn="37F2671B-34F4-FDDF-1A19-98DC94AE6471"/>
+</associations>
+</Column>
+<Column name="DepartCity" id="92E5C553-5702-7337-91E3-C50598806FA1">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:36 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F1DF67B7-6FAA-6F38-63E4-6AA3BFD0DE17" referredColumn="37F2671B-34F4-FDDF-1A19-98DC94AE6471"/>
+</associations>
+</Column>
+<Column name="DirectRoute" id="AA4B103E-B73C-7AB9-02E7-8F1347E0B44E">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:36 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BackRoute" id="AC08D1AF-174F-17CF-C12B-AD13F2C2F280">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:36 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DEB5A243-C032-35C1-D138-E0353BBDCDF5" name="Order_PK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:22:54 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="46F8C5F4-124D-7980-B41E-83C754AED406"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="883AF843-E8F2-6139-1B54-25F61BFA6E04" name="Order_Client_FK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:59:50 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED43A108-5C15-63F5-FEE5-317EFE54AAF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="758A81A5-2185-AFC0-1062-6FA0B86B7465" name="Order_City_FK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 14:11:29 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9411656-3771-C95F-4289-886EB531122D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72A31D98-6B75-7625-7873-95A2C144B4AC" name="Order_City_FKv2">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 14:11:50 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92E5C553-5702-7337-91E3-C50598806FA1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

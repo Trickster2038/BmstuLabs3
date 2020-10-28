@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="275A910F-FC67-9EE3-8CD4-B319F7337286" name="Transporter">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:09:44 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Transporter_ID" id="DDD2990E-B43B-8254-D7F2-D328557FDE16">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:11:47 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Transporter_name" id="5593DF83-19FE-58C4-D30D-A40C8D98F19E">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:11:47 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Internetional_code" id="0C22F134-E97F-ED81-E116-542CDE05BDAA">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:11:47 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="727524D4-AC1F-BECE-5013-D7DC785836BD" name="Transporter_PK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:11:47 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDD2990E-B43B-8254-D7F2-D328557FDE16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

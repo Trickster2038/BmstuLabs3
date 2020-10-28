@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F5A9C448-7593-5AD1-D1CF-DE7AD0960BD2" name="Airport">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:12:15 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Airport_ID" id="2F4E6014-ABE6-9252-98F2-878C6C43E1F3">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:14:00 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="City_ID" id="DDEE202E-4F87-FE8E-A376-5290523EB775">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:14:00 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA98AB11-FF80-75E8-EF0D-C7113C31E04B" referredColumn="37F2671B-34F4-FDDF-1A19-98DC94AE6471"/>
+</associations>
+</Column>
+<Column name="Name" id="AF8FFB0E-B1DC-24A8-2ED8-6F3C7C5B75E9">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:14:00 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4118066E-0FAC-D068-9B94-D2C7A59B321A" name="Airport_PK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 12:14:00 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F4E6014-ABE6-9252-98F2-878C6C43E1F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="03810648-1051-8B37-33CA-6DDFFC13E8B7" name="Airport_City_FK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:58:48 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDEE202E-4F87-FE8E-A376-5290523EB775"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

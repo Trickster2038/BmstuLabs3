@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1030BB38-7F6E-D227-03DC-962A91EFC253" name="Route">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:42:38 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Route_ID" id="D69E6CB3-897E-7EF7-3063-BDD096B8F381">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:44:20 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Route" id="A59DAD90-9AC9-295E-828F-B76E2025C50D">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:44:20 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Flight" id="C87BCFC2-7A9D-D218-21CA-B860AD8583D5">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:44:20 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BBC698E1-E8B2-8642-1FFF-34BA8631122F" referredColumn="44E00992-C983-C6CB-4702-D343C952AE84"/>
+</associations>
+</Column>
+<Column name="Order_ID" id="B01D5228-BE03-B488-3D78-D232B36C0B4B">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:44:20 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7332EB65-81FC-7DDC-808F-1EFF6CF210BE" referredColumn="46F8C5F4-124D-7980-B41E-83C754AED406"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B209060F-7ADB-9049-123F-12948CC22F97" name="Route_PK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 13:44:20 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D69E6CB3-897E-7EF7-3063-BDD096B8F381"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33884D5C-E1E4-EB29-71C9-F430E4CEE566" name="Route_Order_FK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 14:20:41 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B01D5228-BE03-B488-3D78-D232B36C0B4B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="69F2D179-6DFE-7EE0-2063-0FE7E7DBEA4C" name="Route_Flight_FK">
+<createdBy>DBA</createdBy>
+<createdTime>2020-10-01 14:21:57 UTC</createdTime>
+<ownerDesignName>datamodel1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C87BCFC2-7A9D-D218-21CA-B860AD8583D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
