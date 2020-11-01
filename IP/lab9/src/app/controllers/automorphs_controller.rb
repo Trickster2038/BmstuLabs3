@@ -2,10 +2,11 @@
 
 # implements main controller
 class AutomorphsController < ApplicationController
-	def input; end
+	def input
+		render layout: false
+	end
 
 	def view
-
 		input_s = params[:search_range]
     # checking only creation of views by default raises error of nil input
     if input_s.nil?
@@ -20,9 +21,12 @@ class AutomorphsController < ApplicationController
 
     respond_to do |format|
     	format.html 
+    	#format.js
     	format.json do
+    		#redirect_to "myscript.js"
     		render json:
     		{type: @result.class.to_s, value: @result}
+    		 
     	end
     end
 end

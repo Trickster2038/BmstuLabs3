@@ -1,29 +1,3 @@
-<!-- <h1>Automorphs#view</h1>
+ <h1>Automorphs#view</h1>
 <p>Find me in app/views/automorphs/view.html.erb</p>
-<table>
-	<p id="result">
-		<% if @result == "no such sequences to output[]" || @result == "incorrect input" || @result == "nil input (might be init test)"%>
-		<%= @result%>
-		<%else%>
-		<table>
-			<tr><td>sequence</td><td>size</td></tr>
-
-			<% @result.each do |elem| %>
-			<tr>
-				<td><%= elem%></td>
-				<td><%= elem.size%></td>
-			</tr>
-			<% end %>
-
-			<tr>
-				<td>longest sequence:</td>
-				<td><%= @result.max{|elem, next_elem| elem.size <=> next_elem.size}%></td>
-			</tr>
-			<tr>
-				<td>Max size:</td>
-				<td><%= @result.max{|elem, next_elem| elem.size <=> next_elem.size}.size%></td>
-			</tr>
-		</table>
-		<% end %>
-	</p> 
-	<%= link_to "Search in other sequence(array)", :automorphs_input %> -->
+<p id="result"></p>
