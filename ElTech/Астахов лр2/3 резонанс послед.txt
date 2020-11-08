@@ -1,0 +1,27 @@
+U = 20 V
+I = 1.996 A
+P = 39.852 W
+Ik = 1.996 A
+Ic = 1.996 A
+Ur = 19.963 V
+Uc = 199.475 V
+(Ul = 200.691 V)
+
+
+Zk = 100.976 Om
+
+
+Xl = 100.48 Om
+R = 10 Om
+Xc = 99.974 Om
+X = 0.506 Om
+Ql = 400.31 VA
+Qc = 398.29 VA
+Q = 2.02 VA
+
+fiK = 84.28883 degrees
+fi = 2.896 degrees
+
+f = 160 Hz 
+
+ 
