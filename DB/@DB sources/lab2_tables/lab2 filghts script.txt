@@ -39,3 +39,27 @@ ALTER SESSION SET NLS_DATE_FORMAT = 'DD.MM.YYYY HH24:MI:SS'
 
 TRUNCATE TABLE FLIGHT
 
+SELECT flight_id, count(*)
+FROM flight
+GROUP BY flight_id
+HAVING count(*) > 1
+
+Select count(*) from flight
+
+Delete
+from flight
+where ROWNUM < 2100
+
+SELECT flight_id, count(*) as col3
+FROM flight
+GROUP BY flight_id
+HAVING count(*) > 1
+
+SELECT *
+FROM flight
+where flight.airportdep in
+(select airport.airport_id from airport where
+airport.city_id in (select Ord.departcity
+from "Order" ord where Ord.order_id = 1))
+
+
