@@ -3,7 +3,7 @@
 # implements main controller
 class AutomorphsController < ApplicationController
 	def input
-		render layout: false
+		#render layout: false
 	end
 
 	def view

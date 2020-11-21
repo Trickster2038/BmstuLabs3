@@ -20,7 +20,9 @@ function show_result(data){
 	result.innerHTML = "<hr/>(myScript) Result is: " + s +
 	"<p>"+"</p>";
 }
+// лекция по 6 rails
 $(document).ready(function(){
+	alert("Hi!")
  $("#input_form").bind("ajax:success",
  function(xhr, data, status) {
  // data is already an object

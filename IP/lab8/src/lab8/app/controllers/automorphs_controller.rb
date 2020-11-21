@@ -7,13 +7,14 @@ class AutomorphsController < ApplicationController
   def view
     input_s = params[:search_range]
     # checking only creation of views by default raises error of nil input
+    # коды ошибок вместо контсант
     if input_s.nil?
-      res = 'nil input (might be init test)'
+      res = 'error 1'
     elsif input_s.match?(/[^0-9 ]/)
-      res = 'incorrect input'
+      res = 'error 2'
     else
       res = parse_sequence(parse_input(input_s))
-      res = 'no such sequences to output[]' if res.flatten.empty?
+      res = 'error 3' if res.flatten.empty?
     end
     @result = res
   end
@@ -25,13 +26,10 @@ def square?(num)
 end
 
 def parse_sequence(list)
-  result = []
-  tail = list
-  while tail.any?
-    result.append(tail.take_while { |elem| square?(elem) })
-    tail = tail.drop_while { |elem| square?(elem) }.drop_while { |elem| !square?(elem) }
-  end
-  result
+list.map{|elt| [elt,square?(elt)]}
+.slice_when{|elt1,elt2| elt1.last != elt2.last}
+.select{|grp| grp.first.last}
+.map{|grp| grp.map{|elt| elt.first}}
 end
 
 def parse_input(input_string)
