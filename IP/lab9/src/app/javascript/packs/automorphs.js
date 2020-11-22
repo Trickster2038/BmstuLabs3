@@ -1,4 +1,5 @@
-function show_result(data){
+handleAjaxSuccess = function(event){
+	[data, status, xhr] = event.detail;
 	var result = document.getElementById("result");
 	if(data.type == "Array"){
 		s = "<table><tr><td>sequence</td><td>size</td></tr>"
@@ -20,15 +21,21 @@ function show_result(data){
 	result.innerHTML = "<hr/>(myScript) Result is: " + s +
 	"<p>"+"</p>";
 }
+
+
+document.addEventListener('DOMContentLoaded', function(){
+	document.querySelector("#input_form").addEventListener(
+	'ajax:success', handleAjaxSuccess)
+   })
 // лекция по 6 rails
-$(document).ready(function(){
-	alert("Hi!")
- $("#input_form").bind("ajax:success",
- function(xhr, data, status) {
- // data is already an object
- show_result(data)
- })
-}) 
+// $(document).ready(function(){
+// 	alert("Hi!")
+//  $("#input_form").bind("ajax:success",
+//  function(xhr, data, status) {
+//  // data is already an object
+//  show_result(data)
+//  })
+// }) 
 
 // calc_url= location.protocol + "//" + location.host +
 // "/calc/view.json"
