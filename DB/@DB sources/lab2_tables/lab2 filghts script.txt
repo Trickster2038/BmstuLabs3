@@ -62,4 +62,17 @@ where flight.airportdep in
 airport.city_id in (select Ord.departcity
 from "Order" ord where Ord.order_id = 1))
 
+Delete 
+from flight
+where flight_id in
+(SELECT flight_id
+FROM flight
+GROUP BY flight_id
+HAVING count(*) > 1)
+
+SELECT flight_id
+FROM flight
+GROUP BY flight_id
+HAVING count(*) > 1
+
 
