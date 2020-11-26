@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab10_parser.xslt"?>
+<objects type="array">
+  <object>
+    <subsequence>[1, 4, 9]</subsequence>
+    <length type="integer">3</length>
+  </object>
+  <object>
+    <subsequence>[4, 16, 25]</subsequence>
+    <length type="integer">3</length>
+  </object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects type="array">
+  <object>
+    <subsequence type="array">
+      <subsequence type="integer">1</subsequence>
+      <subsequence type="integer">4</subsequence>
+      <subsequence type="integer">9</subsequence>
+    </subsequence>
+    <length type="integer">3</length>
+  </object>
+  <object>
+    <subsequence type="array">
+      <subsequence type="integer">4</subsequence>
+      <subsequence type="integer">16</subsequence>
+      <subsequence type="integer">25</subsequence>
+    </subsequence>
+    <length type="integer">3</length>
+  </object>
+</objects>
