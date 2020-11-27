@@ -1,6 +1,15 @@
 require 'test_helper'
 
 class XmlControllerTest < ActionDispatch::IntegrationTest
+test 'check rss format' do
+    # Делаем запрос с параметрами - словарь превратится в lower=10&upper=100&format=rss
+    get '/', params: { search_range: '1 4 3 16 25', format: :rss }
+
+    assert_response :success
+ 
+    assert_includes @response.headers['Content-Type'], 'application/rss'
+  end
+
   # test "the truth" do
   #   assert true
   # end
