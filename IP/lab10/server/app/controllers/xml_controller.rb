@@ -7,7 +7,7 @@ class XmlController < ApplicationController
     # checking only creation of views by default raises error of nil input
     if input_s.nil?
       res = 'error 1 - nil input'
-    elsif input_s.match?(/[^0-9 ]/)
+    elsif input_s.match?(/[^0-9 -]/)
       res = 'error 2 - incorrect input'
     # res = input_s.to_s
 
@@ -34,8 +34,13 @@ class XmlController < ApplicationController
 end
 
 def square?(num)
+  if num >= 0 
   root = Math.sqrt(num)
-  ((root - root.round).abs < 10e-5)
+  res = ((root - root.round).abs < 10e-5)
+else
+  res = false
+end
+res
 end
 
 def parse_sequence(list)
