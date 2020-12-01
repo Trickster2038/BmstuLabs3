@@ -2,7 +2,7 @@
 <p>Find me in app/views/automorphs/view.html.erb</p>
 <table>
 	<p id="result">
-		<% if @result.instance_of?(String)%>
+		<% if @result.match?(/err/)%>
 		<%case @result.last.to_i%>
 			<%when 1%>
 				<%="nil input"%> 
@@ -16,6 +16,7 @@
 		<%else%>
 		<table>
 			<tr><td>sequence</td><td>size</td></tr>
+			<% @result = @result.split("],").map{|x| x.gsub("[", "")}.map{|x| x.gsub("]","")} %>
 
 			<% @result.each do |elem| %>
 			<% unless elem.size == 0 %>

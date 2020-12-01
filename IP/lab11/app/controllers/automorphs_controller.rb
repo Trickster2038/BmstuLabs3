@@ -14,24 +14,28 @@ class AutomorphsController < ApplicationController
     # res = input_s.to_s
 
 else
-	res = parse_sequence(parse_input(input_s))
-	res = 'error/code 3 - no sequences have been found' if res.flatten.empty?
+	res = "nice data"
+	logger.info "log nice case"
+	#res = parse_sequence(parse_input(input_s))
+	#res = 'error/code 3 - no sequences have been found' if res.flatten.empty?
 end
 
 logger.info "log msg"
-logger.info res.class
-logger.info res.instance_of?(Array)
+# logger.info res.class
+# logger.info res.instance_of?(Array)
 
-if res.instance_of?(Array) 
+unless res.match?(/err/) 
 	logger.info "log msg 2"
       #result = { message: res }
 
       cached_result = CachedResult.find_or_initialize_by(input: input_s)
 
       if cached_result.new_record?
-      	cached_result.result = res.to_s
+      	cached_result.result = parse_sequence(parse_input(input_s)).to_s
       	cached_result.save!
       end
+
+      res = cached_result.result
 
     #config.logger = Logger.new(STDOUT)
     logger.info "db new row"
