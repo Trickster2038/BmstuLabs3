@@ -7,3 +7,8 @@
     <br/>
     <%= submit_tag("Output result") %>
 <% end %> 
+ <br/>
+
+ <%= form_tag("/automorphs/cached", :method => "get") do %>
+    <%= submit_tag("Output cache") %>
+<% end %> 

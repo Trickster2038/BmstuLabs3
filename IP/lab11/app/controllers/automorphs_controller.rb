@@ -55,6 +55,18 @@ unless res.match?(/err/)
 end
 @result = res
 end
+
+  def cached
+    res = CachedResult.all.map { |inst| { input: inst.input, result: inst.result } }
+
+    format = "xml"
+    respond_to do |format|
+      format.xml { render xml: res.to_xml }
+      format.json { render json: res }
+    end
+  end
+
+
 end
 
 def square?(num)
