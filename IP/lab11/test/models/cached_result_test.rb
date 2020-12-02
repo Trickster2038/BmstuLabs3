@@ -12,7 +12,7 @@ class CachedResultTest < ActiveSupport::TestCase
     #instance.save!
     instance2 = instance1.dup
     #instance2.validate
-    assert_raise do 
+    assert_raise ActiveRecord::RecordNotUnique do 
     	instance2.save!
     end
     #assert_equal false, instance2.valid?#instance.errors[:input], ['has already been taken']
