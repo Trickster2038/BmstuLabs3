@@ -41,7 +41,7 @@ unless res.match?(/err/)
 
       resp = CachedResult.find_by(input: input_s)   
       res = resp.result unless resp.nil?
-      logger.info ("|" + res.to_s + "|")
+      logger.info ("log result:" + res.to_s)
 
 
     #config.logger = Logger.new(STDOUT)

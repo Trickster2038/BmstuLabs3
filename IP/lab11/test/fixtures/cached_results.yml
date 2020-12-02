@@ -5,5 +5,5 @@ one:
   result: MyString
 
 two:
-  input: MyString
-  result: MyString
+  input: MyString2
+  result: MyString2
