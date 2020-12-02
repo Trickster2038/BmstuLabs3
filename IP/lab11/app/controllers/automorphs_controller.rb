@@ -8,9 +8,9 @@ class AutomorphsController < ApplicationController
 		input_s = params[:search_range]
     # checking only creation of views by default raises error of nil input
     if input_s.nil?
-    	res = 'error 1 - nil input'
+    	res = 'error 1'
     elsif input_s.match?(/[^0-9 -]/)
-    	res = 'error 2 - incorrect input'
+    	res = 'error 2'
     # res = input_s.to_s
 
 else
@@ -20,25 +20,32 @@ else
 	#res = 'error/code 3 - no sequences have been found' if res.flatten.empty?
 end
 
-logger.info "log msg"
+logger.info "logger init"
 # logger.info res.class
 # logger.info res.instance_of?(Array)
 
 unless res.match?(/err/) 
-	logger.info "log msg 2"
+	#logger.info "log msg 2"
       #result = { message: res }
 
       cached_result = CachedResult.find_or_initialize_by(input: input_s)
 
       if cached_result.new_record?
-      	cached_result.result = parse_sequence(parse_input(input_s)).to_s
+      	res_a = parse_sequence(parse_input(input_s))
+      	res = res_a.any? ? res_a.to_s : "error 3" 
+      	unless res.match?(/err/)
+      	cached_result.result = res
       	cached_result.save!
       end
+      end
 
-      res = cached_result.result
+      resp = CachedResult.find_by(input: input_s)   
+      res = resp.result unless resp.nil?
+      logger.info ("|" + res.to_s + "|")
+
 
     #config.logger = Logger.new(STDOUT)
-    logger.info "db new row"
+    #logger.info "db new row"
 
     # else
     #   max = res.max_by(&:length)
