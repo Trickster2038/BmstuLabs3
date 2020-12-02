@@ -12,9 +12,35 @@ class CachedResultTest < ActiveSupport::TestCase
     #instance.save!
     instance2 = instance1.dup
     #instance2.validate
-    assert_raise ActiveRecord::RecordNotUnique do 
+    assert_raise do 
     	instance2.save!
     end
     #assert_equal false, instance2.valid?#instance.errors[:input], ['has already been taken']
+  end
+
+  test 'should not find random' do 
+  	obj = CachedResult.find_by(input: "webeewrb")
+  	assert obj.nil?
+  end
+
+  test 'should not find fixture' do 
+  	obj = CachedResult.find_by(input: "MyString2")
+  	assert_equal false, obj.nil?
+  end
+
+  test 'should write and read' do
+  	obj = CachedResult.new()
+    obj.input = "4"
+    obj.result = "[[4]]"
+    obj.save!
+    obj2 = CachedResult.find_by(input: "4")
+    assert_equal "[[4]]", obj2.result
+  end
+
+  test 'should filter invalid' do
+  	obj = CachedResult.new()
+    obj.input = "ghuohuohiuh"
+    obj.result = "[[4]]"
+    assert_equal false, obj.valid?
   end
 end

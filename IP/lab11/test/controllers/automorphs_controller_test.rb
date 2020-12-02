@@ -14,6 +14,11 @@ class AutomorphsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test 'should return xml' do
+    get automorphs_cached_url, params: { format: 'xml' }
+    assert_response :success
+  end
+
   
 
   # test 'should get parsed seq' do
