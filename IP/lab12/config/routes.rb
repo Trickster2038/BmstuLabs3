@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'edit', to: 'users#edit', as: 'edit'
-  get 'users', to: 'users#index', as: 'users'
+  get 'userspage', to: 'users#index', as: 'userspage'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

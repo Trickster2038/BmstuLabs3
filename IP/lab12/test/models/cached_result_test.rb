@@ -6,8 +6,8 @@ class CachedResultTest < ActiveSupport::TestCase
   # 
   test 'should error on non unique record' do
     instance1 = CachedResult.new()
-    instance1.input = "1"
-    instance1.result = "[[1]]"
+    instance1.input = "7"
+    instance1.result = "[[7]]"
     instance1.save!
     instance2 = instance1.dup
     assert_raise do 
@@ -20,10 +20,10 @@ class CachedResultTest < ActiveSupport::TestCase
   	assert obj.nil?
   end
 
-  test 'should not find fixture' do 
-  	obj = CachedResult.find_by(input: "MyString2")
-  	assert_equal false, obj.nil?
-  end
+  # test 'should not find fixture' do 
+  # 	obj = CachedResult.find_by(input: "MyString")
+  # 	assert_equal false, obj.nil?
+  # end
 
   test 'should write and read' do
   	obj = CachedResult.new()
