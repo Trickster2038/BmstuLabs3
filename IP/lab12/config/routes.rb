@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'automorphs/input'
   get 'automorphs/view'
   get 'automorphs/cached', :defaults => { :format => 'xml' }
+  get 'automorphs/userlist', :defaults => { :format => 'xml' }
 
 
   resources :users
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'edit', to: 'users#edit', as: 'edit'
   get 'users', to: 'users#index', as: 'users'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

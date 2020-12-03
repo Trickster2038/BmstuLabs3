@@ -48,6 +48,15 @@ class AutomorphsController < ApplicationController
       format.json { render json: res }
     end
   end
+
+  def userlist
+    res = User.all.map { |inst| { email: inst.email } }
+
+    respond_to do |format|
+      format.xml { render xml: res.to_xml }
+      format.json { render json: res }
+    end
+  end
 end
 
 def square?(num)
