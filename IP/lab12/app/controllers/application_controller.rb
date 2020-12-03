@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
-  before_action :require_auth, except: [:new, :edit, :destroy, :create, :show, :index]
+  before_action :require_auth, except: [:new, :create]
+  # :edit, :destroy, :show, :index
 
   def current_user
     if session[:user_id]
