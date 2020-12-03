@@ -13,6 +13,8 @@ class ApplicationController < ActionController::Base
 
   def require_auth
     current_user
+    msg = @current_user ? "authed" : "not_authed"
+    logger.info("~log: " + msg)
     redirect_to login_path unless @current_user
   end
 end
