@@ -11,7 +11,7 @@ class AutomorphsController < ApplicationController
       res = 'error 1'
     elsif input_s.match?(/[^0-9 ]/)
       res = 'error 2'
-      #res = input_s.to_s
+      # res = input_s.to_s
     else
       res = parse_sequence(parse_input(input_s))
       res = 'error 3' if res.flatten.empty?
