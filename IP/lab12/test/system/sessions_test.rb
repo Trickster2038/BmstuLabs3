@@ -17,63 +17,58 @@ class SessionsTest < ApplicationSystemTestCase
 	end
 
 
-  test 'register and count' do
-    login = "testCount@mail.ru"
-    password = "testpass"
+	test 'register and count' do
+		login = "testCount@mail.ru"
+		password = "testpass"
 
-    visit signup_url
-
-
-    fill_in 'Email', with: login
-    fill_in 'Password', with: password
-    fill_in 'Password confirmation', with: password
-    click_on 'Create User'
-
-    assert_text 'Sessions#new'
+		visit signup_url
 
 
-    fill_in 'Email', with: login
-    fill_in 'Password', with: password
-    click_on 'Login'
+		fill_in 'Email', with: login
+		fill_in 'Password', with: password
+		fill_in 'Password confirmation', with: password
+		click_on 'Create User'
 
-    assert_text 'input'
-
-    fill_in 'search_range', with: 4
-    click_on 'Output result'
-
-    assert_text '4'
-    assert_text 'longest sequence:'
+		assert_text 'Sessions#new'
 
 
-    # click_on 'Logout'
+		fill_in 'Email', with: login
+		fill_in 'Password', with: password
+		click_on 'Login'
 
-    # assert_text 'Login'
-  end
+		assert_text 'input'
 
-  test 'register login and logout' do
-  	login = "testCount@mail.ru"
-    password = "testpass"
+		fill_in 'search_range', with: 4
+		click_on 'Output result'
 
-    visit signup_url
+		assert_text '4'
+		assert_text 'longest sequence:'
+	end
 
+	test 'register login and logout' do
+		login = "testCount@mail.ru"
+		password = "testpass"
 
-    fill_in 'Email', with: login
-    fill_in 'Password', with: password
-    fill_in 'Password confirmation', with: password
-    click_on 'Create User'
-
-    assert_text 'Sessions#new'
+		visit signup_url
 
 
-    fill_in 'Email', with: login
-    fill_in 'Password', with: password
-    click_on 'Login'
+		fill_in 'Email', with: login
+		fill_in 'Password', with: password
+		fill_in 'Password confirmation', with: password
+		click_on 'Create User'
 
-    assert_text 'input'
+		assert_text 'Sessions#new'
 
-    click_on 'Logout'
-    assert_text 'Login'
-  end
+
+		fill_in 'Email', with: login
+		fill_in 'Password', with: password
+		click_on 'Login'
+
+		assert_text 'input'
+
+		click_on 'Logout'
+		assert_text 'Login'
+	end
 
 
 

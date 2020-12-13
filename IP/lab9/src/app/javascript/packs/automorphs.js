@@ -1,6 +1,7 @@
 handleAjaxSuccess = function (event) {
 	[data, status, xhr] = event.detail;
 	var result = document.getElementById("result");
+	//document.write("~tick")
 	if (data.type == "Array") {
 		s = "<table><tr><td>sequence</td><td>size</td></tr>"
 
