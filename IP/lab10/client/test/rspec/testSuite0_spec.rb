@@ -11,7 +11,6 @@ describe 'TestSuite0' do
   end
   it 'xmlonlyformat' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:id, 'search_range').click
     @driver.find_element(:id, 'search_range').send_keys('7 1 4 9 14 16')
     @driver.find_element(:css, '.form-check:nth-child(3) > label').click
@@ -37,7 +36,6 @@ describe 'TestSuite0' do
   end
   it 'xmlclientincorrect' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:css, '.form-check:nth-child(3) > label').click
     @driver.find_element(:id, 'search_range').click
     @driver.find_element(:id, 'search_range').send_keys('jlbgkjkgb')
@@ -47,7 +45,6 @@ describe 'TestSuite0' do
   end
   it 'xmlclienterrorempty' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:css, '.form-check:nth-child(3) > label').click
     @driver.find_element(:name, 'commit').click
     sleep 1 
@@ -55,7 +52,6 @@ describe 'TestSuite0' do
   end
   it 'htmlservervals2' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:id, 'search_range').click
     @driver.find_element(:css, 'form').click
     @driver.find_element(:id, 'search_range').send_keys('3 5 9 1 25 3 4 16 3')
@@ -67,7 +63,6 @@ describe 'TestSuite0' do
   end
   it 'htmlservervals1' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:id, 'search_range').click
     @driver.find_element(:id, 'search_range').send_keys('4 9 5 16 7')
     @driver.find_element(:name, 'commit').click
@@ -79,7 +74,6 @@ describe 'TestSuite0' do
   end
   it 'htmlserverincorrect' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:id, 'search_range').click
     @driver.find_element(:id, 'search_range').send_keys('jvhv')
     @driver.find_element(:name, 'commit').click
@@ -88,7 +82,6 @@ describe 'TestSuite0' do
   end
   it 'htmlserverformat' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:id, 'search_range').click
     @driver.find_element(:id, 'search_range').send_keys('7 1 4 9 14 16')
     @driver.find_element(:name, 'commit').click
@@ -100,7 +93,6 @@ describe 'TestSuite0' do
   end
   it 'htmlclientformat' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:id, 'search_range').click
     @driver.find_element(:id, 'search_range').send_keys('7 1 4 9 14 16')
     @driver.find_element(:css, '.form-check:nth-child(4) > label').click
@@ -113,7 +105,6 @@ describe 'TestSuite0' do
   end
   it 'htmlclienterrorempty' do
     @driver.get('http://127.0.0.1:3001/')
-    #@driver.manage.resize_to(1048, 706)
     @driver.find_element(:css, '.form-check:nth-child(4) > label').click
     @driver.find_element(:name, 'commit').click
     @driver.find_element(:css, 'html').click

@@ -6,8 +6,5 @@ test 'check rss format' do
     assert_response :success
     assert_includes @response.headers['Content-Type'], 'application/rss'
   end
-
-  # test "the truth" do
-  #   assert true
-  # end
+  
 end

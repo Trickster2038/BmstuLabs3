@@ -17,11 +17,6 @@
 							</tr>
 						</xsl:for-each>
 					</table>
-				<!-- </xsl:template>
-				<xsl:template match = "/hash">
-					<p><xsl:value-of select="hash/message"/></p>
-				</xsl:template>
- -->
 			</body>
 		</html>
 	</xsl:template>

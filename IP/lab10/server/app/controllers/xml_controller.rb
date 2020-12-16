@@ -34,13 +34,13 @@ class XmlController < ApplicationController
 end
 
 def square?(num)
-  if num >= 0 
-  root = Math.sqrt(num)
-  res = ((root - root.round).abs < 10e-5)
-else
-  res = false
-end
-res
+  if num >= 0
+    root = Math.sqrt(num)
+    res = ((root - root.round).abs < 10e-5)
+  else
+    res = false
+  end
+  res
 end
 
 def parse_sequence(list)

@@ -35,7 +35,6 @@ class AutomorphsController < ApplicationController
       res = resp.result unless resp.nil?
       logger.info('log result:' + res.to_s)
 
-
     end
     @result = res
   end
